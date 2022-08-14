@@ -1,0 +1,42 @@
+body {
+    margin: 250px 0 0;
+    font-family: acumin-pro, sans-serif;
+    background: #373737;
+    font-size: 24px;
+}
+.title{
+    color: #fff;
+    text-align: center;
+}
+.inputs{
+    margin: 0 auto;
+    width: 500px;
+}
+input{
+    margin: 20px 0;
+    width: 500px;
+    padding: 5px 10px;
+}
+
+.reg{
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 10px 0;
+    margin: 30px auto 0;
+    width: 400px;
+    color: #000;
+    text-transform: uppercase;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+.url a{
+    color: red;
+}
+.url{
+    text-align: center;
+    margin-top: 15px;
+    color: #FFF;
+}

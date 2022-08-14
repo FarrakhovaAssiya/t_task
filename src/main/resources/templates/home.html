@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная_страница</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__logo" data-scroll="#intro">Тестовое_задание</div>
+
+                <nav class="nav" id="nav">
+                    <a class="nav__link" href="#" >News</a>
+                    <a class="nav__link" href="#" >Page2</a>
+                    <a class="nav__link" href="#" >Page3</a>
+                </nav>
+
+                <div class="reg">
+
+                    <a href="/t_task/templates/avt.html" class="nav__item">Войти</a>
+                    <a href="/t_task/templates/reg.html" class="nav__item">Регистрация</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="intro" id="intro"></div>
+    <div class="page">
+        <div class="news">
+        <div class="new__item">
+            <img src="https://cdn.nba.com/teams/uploads/sites/1610612741/2022/08/JOE04636.jpg" alt="" class="news__img">
+            <div class="title">Bulls All Summer: Lollapalooza</div>
+            <div class="sub__title">Bulls All Summer spent the weekend at Lollapalooza! Benny mingled with fans, stopped by Kidzapalooza and performed on stage alongside Kygo and the Luvabulls.</div>
+        </div>
+    </div>
+    <div class="news">
+        <div class="new__item">
+            <img src="https://cdn.nba.com/teams/uploads/sites/1610612741/2022/08/ChicagoBulls-AyoSummerCelebration-DariusBrown-20220723-VTJ-66208.jpg" alt="" class="news__img">
+            <div class="title">Bulls All Summer: Ayo’s Block Party</div>
+            <div class="sub__title">The Bulls spent the day at Ayo Dosunmu’s block party in Metcalfe Park to honor his late best friend with a Youth Hoop clinic, giveaways and games.</div>
+        </div>
+    </div>
+    <div class="news">
+        <div class="new__item">
+            <img src="" alt="" class="news__img">
+            <div class="title"></div>
+            <div class="sub__title"></div>
+        </div>
+    </div>
+    </div>
+<script>
+   $(function() {
+
+    var header = $("#header"),
+        introH = $("#intro").innerHeight(),
+        scrollOffset = $(window).scrollTop();
+
+
+    /* Fixed Header */
+    checkScroll(scrollOffset);
+
+    $(window).on("scroll", function() {
+        scrollOffset = $(this).scrollTop();
+
+        checkScroll(scrollOffset);
+    });
+
+    function checkScroll(scrollOffset) {
+        if( scrollOffset >= introH ) {
+            header.addClass("fixed");
+        } else {
+            header.removeClass("fixed");
+        }
+    }
+
+});
+</script>
+
+</body>
+</html>
